@@ -37,7 +37,7 @@ namespace Tasker.Controllers
         public ActionResult ChoresForm()
         {
 
-
+            return View();
 
 
         }

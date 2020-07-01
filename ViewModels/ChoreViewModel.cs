@@ -9,7 +9,7 @@ namespace Tasker.ViewModels
     public class ChoreViewModel
     {
         public Chore Chore { get; set; }
-        public IEnumerable<Item> Items { get; set; }
+        public IEnumerable<Items> Items { get; set; }
 
     }
 }
