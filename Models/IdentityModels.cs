@@ -21,10 +21,11 @@ namespace Tasker.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        public DbSet<Items> Items { get; set; }
+        public DbSet<Item> Items { get; set; }
         public DbSet<Chore> Chores { get; set; }
         public DbSet<ChoreItems> ChoreItems { get; set; }
         public DbSet<ChoreStatus> ChoreStatuses { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
 
         public ApplicationDbContext()

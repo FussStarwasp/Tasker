@@ -17,7 +17,7 @@ namespace Tasker.Migrations
                     })
                 .PrimaryKey(t => new { t.ChoreId, t.ItemId })
                 .ForeignKey("dbo.Chores", t => t.ChoreId, cascadeDelete: true)
-                .ForeignKey("dbo.Items", t => t.Items_Id)
+                .ForeignKey("dbo.Item", t => t.Items_Id)
                 .Index(t => t.ChoreId)
                 .Index(t => t.Items_Id);
             
@@ -48,7 +48,7 @@ namespace Tasker.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Items",
+                "dbo.Item",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -136,7 +136,7 @@ namespace Tasker.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.ChoreItems", "Items_Id", "dbo.Items");
+            DropForeignKey("dbo.ChoreItems", "Items_Id", "dbo.Item");
             DropForeignKey("dbo.Chores", "ChoreStatus_Id", "dbo.ChoreStatus");
             DropForeignKey("dbo.ChoreItems", "ChoreId", "dbo.Chores");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
@@ -153,7 +153,7 @@ namespace Tasker.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.Items");
+            DropTable("dbo.Item");
             DropTable("dbo.ChoreStatus");
             DropTable("dbo.Chores");
             DropTable("dbo.ChoreItems");
