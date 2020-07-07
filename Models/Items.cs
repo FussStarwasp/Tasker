@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Web;
+using WebGrease;
 
 namespace Tasker.Models
 {
@@ -17,6 +18,7 @@ namespace Tasker.Models
         [Display(Name="Serial Number")]
         public string SerialNumber { get; set; }
 
+        public ItemType ItemType { get; set; }
         public string Notes { get; set; }
         [Display(Name="Misc. Notes")]
         public string OtherNotes { get; set; }

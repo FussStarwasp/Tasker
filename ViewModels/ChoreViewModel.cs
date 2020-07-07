@@ -10,6 +10,9 @@ namespace Tasker.ViewModels
     {
         public Chore Chore { get; set; }
         public IEnumerable<Items> Items { get; set; }
+        public IEnumerable<Contact> Contacts { get; set; }
+        public IEnumerable<ChoreStatus> ChoreStatus { get; set; }
+
 
     }
 }

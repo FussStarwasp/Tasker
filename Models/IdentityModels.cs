@@ -26,6 +26,7 @@ namespace Tasker.Models
         public DbSet<ChoreItems> ChoreItems { get; set; }
         public DbSet<ChoreStatus> ChoreStatuses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ItemType> ItemTypes { get; set; }
 
 
         public ApplicationDbContext()

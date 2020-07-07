@@ -1,0 +1,20 @@
+﻿
+@model IEnumerable<Tasker.Models.Chore>
+
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@foreach(var chore in Model)
+{
+    <tr>
+        <td>@chore.Name</td>
+        <td>@chore.Description</td>
+        <td>@chore.IsComplete</td>
+    </tr>
+}
+

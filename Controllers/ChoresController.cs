@@ -36,6 +36,7 @@ namespace Tasker.Controllers
         [HttpPost]
         public ActionResult ChoresForm()
         {
+            var items = _context.Items.ToList();
 
             return View();
 
